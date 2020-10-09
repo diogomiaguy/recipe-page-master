@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Playfair+Display:ital,wght@0,700;1,400&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+:root {
+    /* fonts */
+    --font-Montserrat: 'Montserrat', sans-serif;
+    --font-PlayfairDisplay: 'Playfair Display', serif;
+
+    /* colors */
+    --gray-1: #333333;
+    --gray-2: #4F4F4F;
+    --gray-3: #A9A9A9;
+    --gray-4: #BDBDBD;
+    --gray-5: #c4c4c4;
+    --black: #000000;
+    --white:#ffffff;
+    --orange: #F2994A;
+}
+
+html,
+body {
+    color: var(--gray-1);
+    padding: 16px;
+    font-size: 1rem;
+}
+
+header,
+main,
+footer {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* header */
+header {
+    padding-top: 50px;
+}
+
+h1 {
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 64px;
+    margin-bottom: 12px;
+
+    /* identical to box height */
+
+    color: var(--black);
+}
+
+h2 {
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 32px;
+    margin-bottom: 30px;
+    /* identical to box height */
+
+    /* Gray 1 */
+    color: var(--gray-1);
+}
+
+h3 {
+    font-family: Playfair Display;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 1.125rem;
+    line-height: 24px;
+    margin-bottom: 30px;
+
+    /* identical to box height */
+
+    /* Gray 1 */
+    color:var(--gray-1);
+}
+
+ul {
+    margin-bottom: 30px;
+}
+
+ul li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.description {
+    display: flex;
+    gap: 10px;
+}
+
+.description p {
+    font-family: Montserrat;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 17px;
+    margin-bottom: 30px;
+
+    /* Gray 2 */
+    color: var(--gray-2);
+}
+
+.drag {
+    align-self: start;
+    transform: rotate(90deg);
+    color: var(--gray-5);
+}
+
+header img {
+    margin-bottom: 50px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+
+/* aside  */
+aside {
+    padding: 40px;
+    order: 1;
+    align-self: start;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 12px;
+}
+
+.info-special {
+    display: flex;
+    margin: 10px 0;
+    gap: 10px;
+}
+
+
+.timer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.info-special .title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 0.625rem;
+    line-height: 12px;
+    text-transform: uppercase;
+
+    /* Gray 4 */
+    color: #BDBDBD;
+}
+
+.info-special .subtitle {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 17px;
+
+    /* identical to box height */
+
+    /* Gray 1 */
+    color: #333333;
+}
+
+.info-special .contrast {
+    color: #F2994A;
+}
+
+/* main */
+
+
+.check-ingredients li {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 25px;
+
+    /* or 156% */
+
+    /* Gray 1 */
+    color: #333333;
+}
+
+input[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+    height: 21px;
+    width: 21px;
+    cursor: pointer;
+    background-color: var(--white);
+}
+
+input[type="checkbox"]+span {
+    display: inline-block;
+    padding: 10px;
+    height: 21px;
+    width: 21px;
+    align-self: flex-start;
+    border: 1px solid var(--black);
+    border-radius: 4px;
+
+}
+
+input[type="checkbox"]:checked+span {
+    background-color: var(--orange);
+}
+
+.instruction {
+    display: flex;
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+.instruction .box-number {
+    /* Orange */
+    width: 36px;
+    height: 36px;
+    background: var(--orange);
+    border-radius: 6px;
+    text-align: center;
+
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 32px;
+
+    /* identical to box height */
+
+    color: var(--white);
+}
+
+.instruction p {
+    flex: 1;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 20px;
+
+    color: var(--black);
+}
+
+
+.source {
+    font-family: Montserrat;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 150%;
+
+    /* identical to box height, or 24px */
+
+    /* Gray 4 */
+    color: var(--gray-4);
+}
+
+
+footer {
+    margin-top: 100px;
+    margin-bottom: 20px;
+    text-align: center;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 17px;
+
+    /* identical to box height */
+
+    color: var(--gray-3);
+}
+
+/* responsive */
+@media only screen and (max-width: 651px) {
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    header img {
+        margin-bottom: 20px;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    /* aside  */
+    aside {
+        padding: 0;
+        order: 0;
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.12);
+        border-radius: 0px;
+    }
+
+    .timer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
